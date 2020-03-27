@@ -5,19 +5,19 @@ stage('scm checkout'){
 }
 
 stage('build cri package'){
-  sh 'cd cri; mvn clean package'
+  sh 'mvn clean package'
 }
 
 stage('archeive artifacts'){
   sh '''
-    mkdir -p $WORKSPACE/CRI
-    cp -r cri/device/target/device*.jar CRI
-    cp -r cri/owner/target/owner*.war CRI
-    cp -r cri/rendezvous/target/rendezvous*.war CRI
-    cp -r cri/to0client/target/to0client*.jar CRI
+    mkdir -p $WORKSPACE/cri
+    cp -r cri/device/target/device*.jar cri
+    cp -r cri/owner/target/owner*.war cri
+    cp -r cri/rendezvous/target/rendezvous*.war cri
+    cp -r cri/to0client/target/to0client*.jar cri
     '''
-    zip zipFile: 'CRI.zip', archive: false, dir: 'CRI'
-    archiveArtifacts artifacts: 'CRI.zip', fingerprint: true, allowEmptyArchive: false
+    zip zipFile: 'cri.zip', archive: false, dir: 'cri'
+    archiveArtifacts artifacts: 'cri.zip', fingerprint: true, allowEmptyArchive: false
 }
 
 }
