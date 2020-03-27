@@ -11,10 +11,10 @@ stage('build cri package'){
 stage('archeive artifacts'){
   sh '''
     mkdir -p $WORKSPACE/cri
-    cp -r cri/device/target/device*.jar cri
-    cp -r cri/owner/target/owner*.war cri
-    cp -r cri/rendezvous/target/rendezvous*.war cri
-    cp -r cri/to0client/target/to0client*.jar cri
+    cp -r device/target/device*.jar cri
+    cp -r owner/target/owner*.war cri
+    cp -r rendezvous/target/rendezvous*.war cri
+    cp -r to0client/target/to0client*.jar cri
     '''
     zip zipFile: 'cri.zip', archive: false, dir: 'cri'
     archiveArtifacts artifacts: 'cri.zip', fingerprint: true, allowEmptyArchive: false
