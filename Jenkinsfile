@@ -1,6 +1,7 @@
 node('ubuntu18.04-OnDemand'){
 
 stage('scm checkout'){
+  cleanWs()
   checkout scm
 }
 
