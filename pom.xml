@@ -12,6 +12,7 @@
   <groupId>org.sdo</groupId>
   <version>${revision}</version>
   <name>SDO</name>
+  
   <packaging>pom</packaging>
 
   <!--
