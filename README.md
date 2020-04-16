@@ -12,6 +12,8 @@ build and assume familiarity with
 To build SDO, run `mvn package` from the root directory of the SDO source.
 The build creates files which will be used in the rest of this guide, including:
 
+
+
 `device/target/device-1.7.jar`
 
 An implementation of the SDO Device described in the Secure Device Onboard Protocol 
