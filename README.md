@@ -2,8 +2,6 @@
 
 ## Building SDO
 
-
-
 SDO is written in [Java 11](https://openjdk.java.net/projects/jdk/11/) and uses the 
 [Apache Maven* software](http://maven.apache.org).  The instructions which follow describe a simple 
 build and assume familiarity with 
@@ -11,8 +9,6 @@ build and assume familiarity with
 
 To build SDO, run `mvn package` from the root directory of the SDO source.
 The build creates files which will be used in the rest of this guide, including:
-
-
 
 `device/target/device-1.7.jar`
 
